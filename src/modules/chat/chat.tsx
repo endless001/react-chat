@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import 'components/chat/chat.css';
+import 'modules/chat/chat.css';
 import avatar from "assets/images/users/avatar-4.jpg"
 import {Collapse, Dropdown, ListGroup, Nav} from "react-bootstrap";
-import { FriendProfile } from "components/friend/friend-profile"
+import { FriendProfile } from "modules/friend/friend-profile"
 
 
 export const Chat = () => {

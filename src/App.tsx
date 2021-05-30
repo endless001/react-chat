@@ -4,16 +4,15 @@ import { Button } from 'react-bootstrap';
 import  {Menu} from "components/menu/menu";
 import 'remixicon/fonts/remixicon.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Chat} from "components/chat/chat";
+import {Chat} from "modules/chat/chat";
 import {RenderRoute} from "components/route/route";
+import userManager from "./user-manager";
 
 function App() {
+
+
   return (
-    <div className="layout-wrapper d-lg-flex">
-     <Menu/>
      <RenderRoute/>
-    <Chat/>
-    </div>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import avatar from "assets/images/users/avatar-4.jpg";
-import  "components/friend/friend-profile.css";
+import  "modules/friend/friend-profile.css";
 import {Accordion, Card, Dropdown, Nav} from "react-bootstrap";
 import { CustomToggle } from "components/toggle/custom-toggle"
 

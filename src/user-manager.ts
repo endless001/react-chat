@@ -2,8 +2,8 @@ import { createUserManager } from 'redux-oidc';
 import { UserManagerSettings } from 'oidc-client';
 
 const userManagerConfig: UserManagerSettings = {
-  client_id: 'mvc',
-  redirect_uri: 'http://localhost:5100/callback',
+  client_id: 'spa',
+  redirect_uri: 'http://localhost:3000/callback',
   response_type: 'token id_token',
   scope:"openid profile api1",
   authority: 'http://localhost:5000',
