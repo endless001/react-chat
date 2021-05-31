@@ -4,6 +4,7 @@ import userManager from "../../user-manager";
 import {push} from 'connected-react-router';
 import {Dispatch} from 'redux';
 import {connect} from 'react-redux';
+import { Spinner } from "react-bootstrap";
 
 interface CallbackProps {
   dispatch: Dispatch;
@@ -11,14 +12,16 @@ interface CallbackProps {
 
 const Callback = (props: CallbackProps) => {
   const successCallback = (user: User) => {
+    console.log(user)
     // get the user's previous location, passed during signinRedirect()
     var redirectPath = user.state.path as string;
-    props.dispatch(push(redirectPath));
+
+   // props.dispatch(push(redirectPath));
   };
 
   const errorCallback = (error: Error) => {
     console.log(error);
-    props.dispatch(push('/'));
+  //  props.dispatch(push('/'));
   };
 
   useEffect(() => {
@@ -28,6 +31,6 @@ const Callback = (props: CallbackProps) => {
       .catch(error => errorCallback(error));
   });
 
-  return <div>Loading...</div>;
+  return <Spinner animation="border" />;
 };
 export default connect()(Callback);
