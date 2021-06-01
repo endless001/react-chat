@@ -6,12 +6,11 @@ import {routes} from 'components/routes/routes';
 import userManager from "./user-manager";
 import {ErrorBoundary, FallbackProps, useErrorHandler} from "react-error-boundary";
 
-function ErrorFallback({error, resetErrorBoundary}:FallbackProps) {
+function ErrorFallback({error}:FallbackProps) {
     return (
         <div role="alert">
             <p>Something went wrong:</p>
             <pre>{error?.message}</pre>
-            <button onClick={resetErrorBoundary}>Try again</button>
         </div>
     )
 }
