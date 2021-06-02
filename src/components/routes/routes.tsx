@@ -1,21 +1,26 @@
 import React from "react";
-import {Authenticated} from "components/authenticated/authenticated";
+import UserLayout from "layouts/user-layout";
+import BasicLayout from "layouts/basic-layout";
+import Callback from "modules/callback/callback";
+import NotFound from "modules/not-found/not-found";
+import {Authenticated} from "../authenticated/authenticated";
+
 
 export const routes = [
   {
     path: '/',
-    element: import("layouts/user-layout"),
+    element:  Authenticated(<BasicLayout/>),
     children: []
   },
   {
     path: 'user',
-    element: import("layouts/basic-layout"),
+    element: <UserLayout/>,
     children: [
-    {path: '/callback', element:Authenticated(React.lazy(() =>import("modules/callback/callback")))}
+    {path: '/callback', element:<Callback/>}
   ]
   },
   { path: 'home', redirectTo: '/' },
-  { path: '*', element:React.lazy(() =>import("modules/not-found/not-found")) }
+  { path: '*', element:<NotFound/> }
 ];
 
 

@@ -15,12 +15,11 @@ function App() {
 
 
 
+
     return (
         <div>
             <ErrorBoundary FallbackComponent={ErrorFallback}>
-                <Suspense fallback={<div> loading....</div>}>
                 {routing}
-                </Suspense>
             </ErrorBoundary>
         </div>
     );
