@@ -18,11 +18,11 @@ const Callback = (props: CallbackProps) => {
       successCallback={() =>
       {
         console.log(props)
-        props.dispatch(push("/"))
+        props.dispatch(push("/home"))
       }}
       errorCallback={error => {
         console.log(props)
-        props.dispatch(push("/"));
+        props.dispatch(push("/home"));
         console.log(1)
         console.error(error);
       }}
