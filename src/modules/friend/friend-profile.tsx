@@ -74,7 +74,6 @@ export const FriendProfile = () => {
                       </Card>
                       <Card>
                         <Accordion.Toggle as={Card.Header} eventKey="1">
-
                             <h5 className="font-size-14 m-0">
                               <i className="ri-attachment-line mr-2 align-middle d-inline-block"></i> Attached Files
                               <i className="mdi mdi-chevron-up float-right accor-plus-icon"></i>

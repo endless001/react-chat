@@ -1,7 +1,7 @@
 import React from 'react';
 import 'modules/contact/contact.css';
 
-export const Contact = () =>  {
+const Contact = () =>  {
     return(
         <div className="simplebar-mask">
             <div className="simplebar-offset">
@@ -531,3 +531,5 @@ export const Contact = () =>  {
         </div>
     )
 }
+
+export  default  Contact;

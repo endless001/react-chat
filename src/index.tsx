@@ -5,7 +5,7 @@ import { store } from "./store";
 import {Provider} from "react-redux";
 import { BrowserRouter} from "react-router-dom";
 import {loadUser, OidcProvider} from "redux-oidc";
-import userManager from "./user-manager";
+import userManager from "./utils/user-manager";
 
 
 

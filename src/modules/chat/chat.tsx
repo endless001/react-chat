@@ -17,7 +17,7 @@ export const Chat = () => {
                         <div className="col-sm-4 col-8">
                             <div className="media align-items-center">
                                 <div className="d-block d-lg-none mr-2">
-                                    <a href="javascript: void(0);"
+                                    <a href="#"
                                        className="user-chat-remove text-muted font-size-16 p-2"><i
                                         className="ri-arrow-left-s-line"></i></a>
                                 </div>
