@@ -17,7 +17,7 @@ export const routes = [
       { path: '/', element:<Message/> },
       { path: '/contact', element:<Contact/> },
       { path: '/group', element:<Group/> },
-      { path: 'settings', element:<Settings/>  }
+      { path: '/settings', element:<Settings/>  }
     ]
   },
   { path: 'callback',element: <Callback/> },

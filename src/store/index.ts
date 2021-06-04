@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import createOidcMiddleware, {loadUser, reducer as oidcReducer} from 'redux-oidc';
+import {loadUser, reducer as oidcReducer} from 'redux-oidc';
 import { routerMiddleware } from 'react-router-redux'
 import userManager from "utils/user-manager";
 import { createBrowserHistory } from 'history'

@@ -1,5 +1,5 @@
 import React from "react";
-import {FallbackProps} from "react-error-boundary";
+import { FallbackProps } from "react-error-boundary";
 import styled from "@emotion/styled";
 import { Spinner } from "react-bootstrap";
 
