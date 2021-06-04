@@ -3,7 +3,7 @@ import { UserManagerSettings } from 'oidc-client';
 
 const userManagerConfig: UserManagerSettings = {
   client_id: 'chat',
-  redirect_uri: 'http://127.0.0.1:3000/user/callback',
+  redirect_uri: 'http://127.0.0.1:3000/callback',
   response_type: 'token id_token',
   scope:"openid profile",
   authority: 'http://localhost:5000',

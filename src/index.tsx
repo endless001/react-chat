@@ -1,19 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { store } from "./store";
+import { store } from "store";
 import {Provider} from "react-redux";
 import { BrowserRouter} from "react-router-dom";
-import {loadUser, OidcProvider} from "redux-oidc";
-import userManager from "./utils/user-manager";
-
 
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
     <BrowserRouter>
-    <App />
+      <App />
     </BrowserRouter>
     </Provider>
   </React.StrictMode>,
