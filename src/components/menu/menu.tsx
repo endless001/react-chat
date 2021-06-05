@@ -4,13 +4,14 @@ import { Dropdown, Nav } from 'react-bootstrap';
 import avatar from "assets/images/users/avatar-1.jpg";
 import logo from "assets/images/logo.svg";
 import { CustomToggle } from "components/toggle/custom-toggle"
+import {Link} from "react-router-dom";
 
 
 export const Menu = () => {
     return(
         <div className="side-menu flex-lg-column mr-lg-1">
             <div className="navbar-brand-box">
-                <a href="index.html" className="logo logo-dark">
+                <a  className="logo logo-dark">
                         <span className="logo-sm">
                             <img src={logo} alt="" height="30"/>
                         </span>
@@ -20,29 +21,29 @@ export const Menu = () => {
             <div className="flex-lg-column my-auto">
                 <Nav defaultActiveKey="/home" className="side-menu-nav justify-content-center">
                     <Nav.Item as="li">
-                        <a className="nav-link">
+                      <Link to="/settings" className="nav-link">
                             <i className="ri-user-2-line"></i>
-                        </a>
+                      </Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <a className="nav-link">
+                      <Link to="/" className="nav-link">
                             <i className="ri-message-3-line"></i>
-                        </a>
+                      </Link>
                     </Nav.Item>
                     <Nav.Item  as="li">
-                        <a className="nav-link">
-                             <i className="ri-group-line"></i>
-                        </a>
+                      <Link to="/group" className="nav-link">
+                        <i className="ri-group-line"></i>
+                      </Link>
                     </Nav.Item>
                     <Nav.Item as="li">
-                        <a className="nav-link">
+                      <Link to="/contact" className="nav-link">
                              <i className="ri-contacts-line"></i>
-                        </a>
+                      </Link>
                     </Nav.Item>
                     <Nav.Item  as="li">
-                        <a className="nav-link">
+                      <Link to="/settings" className="nav-link">
                             <i className="ri-settings-2-line"></i>
-                        </a>
+                      </Link>
                     </Nav.Item>
                 </Nav>
 

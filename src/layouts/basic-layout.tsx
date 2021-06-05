@@ -4,7 +4,7 @@ import {Chat} from "modules/chat/chat";
 import {Outlet} from "react-router-dom";
 import userManager from "utils/user-manager";
 import { useErrorHandler} from "react-error-boundary";
-import { FullPageLoading} from "components/library";
+import {FullPageLoading, Sidebar} from "components/library";
 
 const BasicLayout=()=> {
     const [ loading, setLoading ] = useState(true);
@@ -24,7 +24,7 @@ const BasicLayout=()=> {
         });
     },[])
 
-  return  loading ? (<FullPageLoading/>):(<div className="layout-wrapper d-lg-flex"><Menu/><Suspense fallback={<FullPageLoading/>}><Outlet/></Suspense><Chat/></div>);
+  return  loading ? (<FullPageLoading/>):(<div className="layout-wrapper d-lg-flex"><Menu/><Sidebar><Suspense fallback={<FullPageLoading/>}><Outlet/></Suspense></Sidebar><Chat/></div>);
 
 }
 

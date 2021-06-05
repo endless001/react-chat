@@ -6,7 +6,7 @@ import { FriendProfile } from "modules/friend/friend-profile"
 
 
 export const Chat = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
     return (
         <div className="user-chat w-100">
@@ -301,9 +301,9 @@ export const Chat = () => {
                                                                     <li className="list-inline-item message-img-list">
                                                                         <div>
                                                                             <a className="popup-img d-inline-block m-1"
-                                                                               href="assets/images/small/img-1.jpg"
+                                                                               href={avatar}
                                                                                title="Project 1">
-                                                                                <img src="assets/images/small/img-1.jpg"
+                                                                                <img src={avatar}
                                                                                      alt="" className="rounded border"/>
                                                                             </a>
                                                                         </div>
@@ -344,9 +344,9 @@ export const Chat = () => {
                                                                     <li className="list-inline-item message-img-list">
                                                                         <div>
                                                                             <a className="popup-img d-inline-block m-1"
-                                                                               href="assets/images/small/img-2.jpg"
+                                                                               href={avatar}
                                                                                title="Project 2">
-                                                                                <img src="assets/images/small/img-2.jpg"
+                                                                                <img src={avatar}
                                                                                      alt="" className="rounded border"/>
                                                                             </a>
                                                                         </div>

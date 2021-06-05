@@ -1,6 +1,7 @@
 import React, {useState,Suspense} from 'react';
 import 'remixicon/fonts/remixicon.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'App.css'
 import {useRoutes} from "react-router-dom";
 import {routes} from 'components/routes/routes';
 import {ErrorBoundary} from "react-error-boundary";

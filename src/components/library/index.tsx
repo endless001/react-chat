@@ -25,3 +25,14 @@ const FullPage = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+
+export const Sidebar = styled.div`
+  height: 100vh;
+  background-color: #f5f7fb;
+
+  @media (min-width: 992px) {
+    min-width: 380px;
+    max-width: 380px;
+    }
+`;
