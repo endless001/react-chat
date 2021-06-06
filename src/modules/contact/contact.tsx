@@ -1,53 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'modules/contact/contact.css';
+import {CreateContactModal} from "modules/contact/create-contact-modal";
 
 const Contact = () =>  {
-    return(
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
+
+  return(
       <div className="tab-pane active" id="pills-contacts" role="tabpanel" aria-labelledby="pills-contacts-tab">
         <div>
           <div className="p-4">
             <div className="user-chat-nav float-right">
               <div data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Add Contact">
-
-                <button type="button" className="btn btn-link text-decoration-none text-muted font-size-18 py-0"
-                        data-toggle="modal" data-target="#addContact-exampleModal">
+                <button type="button"   onClick={()=>setOpen(true)}  className="btn btn-link text-decoration-none text-muted font-size-18 py-0">
                   <i className="ri-user-add-line"></i>
                 </button>
               </div>
             </div>
             <h4 className="mb-4">Contacts</h4>
 
-            <div className="modal fade" id="addContact-exampleModal" role="dialog"
-                 aria-labelledby="addContact-exampleModalLabel" aria-hidden="true">
-              <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <h5 className="modal-title font-size-16" id="addContact-exampleModalLabel">Add Contact</h5>
-                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                  </div>
-                  <div className="modal-body p-4">
-                    <form>
-                      <div className="form-group mb-4">
-                        <label htmlFor="addcontactemail-input">Email</label>
-                        <input type="email" className="form-control" id="addcontactemail-input"
-                               placeholder="Enter Email"/>
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="addcontact-invitemessage-input">Invatation Message</label>
-                        <textarea className="form-control" id="addcontact-invitemessage-input"
-                                  placeholder="Enter Message"></textarea>
-                      </div>
-                    </form>
-                  </div>
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-link" data-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-primary">Invite Contact</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <CreateContactModal HandleClose={handleClose} Open={open} Title="Add Contact"/>
 
             <div className="search-box chat-search-box">
               <div className="input-group bg-light  input-group-lg rounded-lg">

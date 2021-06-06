@@ -1,14 +1,12 @@
 import React from "react";
-import 'modules/message/message.css';
 import avatar  from "assets/images/users/avatar-2.jpg";
 
 const Message=()=>{
     return (
         <div className="tab-pane fade show active" id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab">
-
           <div>
             <div className="px-4 pt-4">
-              <h4 className="mb-4">Chats</h4>
+              <h4 className="mb-4">Message</h4>
               <div className="search-box chat-search-box">
                 <div className="input-group mb-3 bg-light  input-group-lg rounded-lg">
                   <div className="input-group-prepend">
@@ -31,7 +29,7 @@ const Message=()=>{
                   <div className="simplebar-mask">
                     <div className="simplebar-offset">
                       <div className="simplebar-content-wrapper">
-                        <div className="simplebar-content">
+                        <div className="simplebar-content" style={{padding: 0}}>
 
                           <ul className="list-unstyled chat-list chat-user-list">
                             <li>

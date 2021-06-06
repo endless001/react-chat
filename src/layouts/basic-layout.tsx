@@ -24,8 +24,18 @@ const BasicLayout=()=> {
         });
     },[])
 
-  return  loading ? (<FullPageLoading/>):(<div className="layout-wrapper d-lg-flex"><Menu/><Sidebar><Suspense fallback={<FullPageLoading/>}><Outlet/></Suspense></Sidebar><Chat/></div>);
-
+  return  loading ? (<FullPageLoading/>):(layout)
 }
+
+const layout = (
+  <div className="layout-wrapper d-lg-flex">
+  <Menu/>
+  <Sidebar>
+    <Suspense fallback={<FullPageLoading/>}>
+      <Outlet/>
+    </Suspense>
+  </Sidebar>
+  <Chat/>
+</div>);
 
 export  default  BasicLayout;

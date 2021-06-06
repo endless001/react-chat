@@ -7,6 +7,15 @@
  * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE */
+a{
+  text-decoration:none;
+}
+.mr-3, .mx-3 {
+  margin-right: 1rem!important;
+}
+.float-right {
+  float: right!important;
+}
 .waves-effect
 {
   position: relative;
@@ -568,6 +577,10 @@
   display: none
 }
 
+.simplebar-content{
+  padding: 24px;
+}
+
 .simplebar-content:after,.simplebar-content:before
 {
   content: ' ';
@@ -989,7 +1002,11 @@
 {
   line-height: 16px;
   font-weight: 600;
-  font-size: 10px
+  font-size: 10px;
+  color: #ef476f;
+  background-color: rgba(239,71,111,.18);
+
+  border-radius: 10rem;
 }
 
 .chat-user-img
