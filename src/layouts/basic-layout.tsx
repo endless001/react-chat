@@ -35,7 +35,8 @@ const BasicLayout=()=> {
           </Suspense>
         </Sidebar>
         <Chat/>
-      </div>}
+      </div>
+      }
       </>
   )
 }
