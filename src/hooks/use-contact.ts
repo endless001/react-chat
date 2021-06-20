@@ -7,6 +7,6 @@ import { useQuery } from "react-query";
 export const useContacts = (param?: Partial<Contact>) => {
   const client = useHttp();
   return useQuery<Contact[]>(["projects", cleanObject(param)], async () =>
-    await client("projects", { data: param })
+      (await client)("projects", { data: param })
   );
 };
