@@ -1,12 +1,24 @@
 import {Contact} from "types/contact";
 import {useHttp} from "hooks/use-http";
 import {cleanObject} from "utils";
-import { useQuery } from "react-query";
+import {QueryKey, useMutation, useQuery} from "react-query";
 
 
-export const useMessage = (param?: Partial<Contact>) => {
+export const useMessages = (param?: Partial<Contact>) => {
   const client = useHttp();
   return useQuery<Contact[]>(["projects", cleanObject(param)], async () =>
     (await client)("projects", { data: param })
+  );
+};
+
+
+export const useDeleteMessage = (queryKey: QueryKey) => {
+  const client = useHttp();
+
+  return useMutation(
+    async ({ id }: { id: number }) =>
+      (await client)(`tasks/${id}`, {
+        method: "DELETE",
+      })
   );
 };

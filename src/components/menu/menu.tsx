@@ -5,9 +5,15 @@ import avatar from "assets/images/users/avatar-1.jpg";
 import logo from "assets/images/logo.svg";
 import { CustomToggle } from "components/toggle/custom-toggle"
 import {Link} from "react-router-dom";
+import userManager from "utils/user-manager";
 
 
 export const Menu = () => {
+  const logout = (event: any) => {
+    event.preventDefault();
+    userManager.signoutRedirect();
+    userManager.removeUser();
+  };
     return(
         <div className="side-menu flex-lg-column mr-lg-1">
             <div className="navbar-brand-box">
@@ -72,7 +78,8 @@ export const Menu = () => {
                                     </Dropdown.Item>
                                     <Dropdown.Divider />
                                     <Dropdown.Item as="li">
-                                        <a className="dropdown-item" href="#">Log out <i
+
+                                        <a className="dropdown-item"  onClick={logout}>Log out <i
                                             className="ri-logout-circle-r-line float-right text-muted"></i></a>
                                     </Dropdown.Item>
                                 </Dropdown.Menu>
